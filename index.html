@@ -1,116 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ilyas's site</title>
-<link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;700&display=swap" rel="stylesheet">
-<style>
-    body {
-        font-family: 'Cascadia Code', monospace;
-        margin: 0;
-        background-color: #121212;
-        color: #e0e0e0;
-        scroll-behavior: smooth;
-    }
+    <link rel="icon" type="image/x-icon" href="tux.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilyas's site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cascadia Code', monospace;
+            margin: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+            scroll-behavior: smooth;
+        }
 
-    header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: #1e1e1e;
-        padding: 10px 0;
-        text-align: center;
-        z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-    }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #1e1e1e;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
 
-    header a {
-        color: #82aaff;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-    }
+        header a {
+            color: #82aaff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    header a:hover {
-        text-decoration: underline;
-    }
+        header a:hover {
+            text-decoration: underline;
+        }
 
-    .container {
-        max-width: 800px;
-        margin: 100px auto 40px auto;
-        padding: 0 20px;
-    }
+        .container {
+            max-width: 800px;
+            margin: 100px auto 40px auto;
+            padding: 0 20px;
+        }
 
-    h1, h2 {
-        color: #ffffff;
-    }
+        h1,
+        h2 {
+            color: #ffffff;
+        }
 
-    ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-    a {
-        color: #82aaff;
-        text-decoration: none;
-    }
+        a {
+            color: #82aaff;
+            text-decoration: none;
+        }
 
-    a:hover {
-        text-decoration: underline;
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    .skills img {
-        margin-bottom: 2em;
-    }
+        .skills img {
+            margin-bottom: 2em;
+        }
 
-    .projects {
-        margin-top: 1em;
-        padding: 1em;
-        background-color: #1e1e1e;
-        border-radius: 10px;
-    }
+        .projects {
+            margin-top: 1em;
+            padding: 1em;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+        }
 
-    .projects li {
-        margin-bottom: 0.8em;
-        line-height: 1.5;
-    }
+        .projects li {
+            margin-bottom: 0.8em;
+            line-height: 1.5;
+        }
 
-    p {
-        line-height: 1.6;
-    }
-</style>
+        p {
+            line-height: 1.6;
+        }
+    </style>
 </head>
+
 <body>
 
 
-<div class="container" id="home">
-    <h1>Home</h1>
-    <p>Welcome to my personal site! I'm Ilyas, a student and developer passionate about low-level programming, operating systems, and software development. Here you can find information about me, my skills, and some of the projects I've worked on.</p>
-    <h1 id="contact">Contact</h1>
-    <ul>
-        <li>Discord: uncognic</li>
-        <li>GitHub: <a href="https://github.com/uncognic" target="_blank">uncognic</a></li>
-        <li>Email: <a href="mailto:uncognic@proton.me">uncognic@proton.me</a></li>
-    </ul>
-
-    <h1 id="skills">Skills</h1>
-    <div class="skills" align="left">
-        <img src="https://skillicons.dev/icons?i=linux,windows,cpp,c,cs,rust,java,kotlin,python,qt,html,css,git" alt="Skills"/>
-    </div>
-
-    <h2 id="projects">Projects</h2>
-    <div class="projects">
+    <div class="container" id="home">
+        <h1>Home</h1>
+        <p>Welcome to my personal site! I'm Ilyas, a student and developer passionate about low-level programming,
+            operating systems, and software development. Here you can find information about me, my skills, and some of
+            the projects I've worked on.</p>
+        <h1 id="contact">Contact</h1>
         <ul>
-            <li><a href="https://github.com/uncognic/blackbox" target="_blank">Blackbox: Minimal, Turing-complete bytecode virtual machine with a custom assembly language written in C</a></li>
-            <li><a href="https://github.com/uncognic/xcore" target="_blank">Xcore: Operating system for i686 written in C and Assembly</a></li>
-            <li><a href="https://github.com/uncognic/wincord" target="_blank">Wincord: Small and lightweight Discord client written in .NET 4.8 WinForms and C#</a></li>
-            <li><a href="https://github.com/uncognic/wwwd" target="_blank">wwwd: Small HTTP server written in Rust</a></li>
-            <li><a href="https://github.com/uncognic/xdata" target="_blank">Xdata: In-progress minimal filesystem written in Rust</a></li>
-            <li><a href="https://github.com/uncognic/linux-utils" target="_blank">linux-utils: Coreutils written in C for Linux</a></li>
-            <li><a href="https://github.com/uncognic/rcopy-gui" target="_blank">rcopy-gui: Simple GUI for Robocopy written in C# </a></li>
+            <li>Discord: uncognic</li>
+            <li>GitHub: <a href="https://github.com/uncognic" target="_blank">uncognic</a></li>
+            <li>Email: <a href="mailto:uncognic@proton.me">uncognic@proton.me</a></li>
         </ul>
+
+        <h1 id="skills">Skills</h1>
+        <div class="skills" align="left">
+            <img src="https://skillicons.dev/icons?i=linux,windows,cpp,c,cs,rust,java,kotlin,python,qt,html,css,git"
+                alt="Skills" />
+        </div>
+
+        <h2 id="projects">Projects</h2>
+        <div class="projects">
+            <ul>
+                <li><a href="https://github.com/uncognic/blackbox" target="_blank">Blackbox: Minimal, Turing-complete
+                        bytecode virtual machine with a custom assembly language written in C</a></li>
+                <li><a href="https://github.com/uncognic/xcore" target="_blank">Xcore: Operating system for i686 written
+                        in C and Assembly</a></li>
+                <li><a href="https://github.com/uncognic/wincord" target="_blank">Wincord: Small and lightweight Discord
+                        client written in .NET 4.8 WinForms and C#</a></li>
+                <li><a href="https://github.com/uncognic/wwwd" target="_blank">wwwd: Small HTTP server written in
+                        Rust</a></li>
+                <li><a href="https://github.com/uncognic/xdata" target="_blank">Xdata: In-progress minimal filesystem
+                        written in Rust</a></li>
+                <li><a href="https://github.com/uncognic/linux-utils" target="_blank">linux-utils: Coreutils written in
+                        C for Linux</a></li>
+                <li><a href="https://github.com/uncognic/rcopy-gui" target="_blank">rcopy-gui: Simple GUI for Robocopy
+                        written in C# </a></li>
+            </ul>
+        </div>
     </div>
-</div>
 </body>
+
 </html>
