@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" type="image/x-icon" href="../tux.ico">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog — uncognic's site</title>
+    <link rel="icon" type="image/x-icon" href="tux.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - uncognic's site</title>
     <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -80,62 +80,66 @@
             padding: 0 16px;
         }
 
-        .posts {
+        .projects {
             margin-top: 1em;
             padding: 1em;
             background-color: var(--surface);
             border-radius: 10px;
         }
 
-        .posts ul {
-            list-style: none;
+        .projects ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
             padding: 0;
             margin: 0;
+            list-style: none;
         }
 
-        .post {
+        .projects li {
             background: var(--card);
-            padding: 14px;
+            padding: 12px;
             border-radius: 8px;
-            margin-bottom: 12px;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 12px;
-            align-items: start;
-            transition: transform .12s ease, box-shadow .12s ease;
+            transition: transform .18s ease, box-shadow .18s ease;
             box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
         }
 
-        .post:hover {
-            transform: translateY(-4px);
+        .projects li:hover {
+            transform: translateY(-6px);
             box-shadow: 0 8px 22px rgba(0, 0, 0, .6);
         }
 
-        .post a.title {
+        .projects a {
             color: var(--accent);
             font-weight: 700;
-            text-decoration: none;
             display: block;
             margin-bottom: 6px;
         }
 
-        .post p.excerpt {
+        .projects p {
             margin: 0;
             color: var(--muted);
             font-size: 0.95rem;
         }
 
-        .post time {
-            color: var(--muted);
-            font-size: 0.85rem;
-            white-space: nowrap;
-            margin-left: 12px;
-        }
-
         @media (max-width: 560px) {
-            .post {
+            header {
+                padding: 8px;
+            }
+
+            .nav-links {
+                gap: 8px;
+            }
+
+            .projects ul {
                 grid-template-columns: 1fr;
             }
+        }
+
+        .skills img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
         a {
@@ -159,6 +163,7 @@
 </head>
 
 <body>
+
     <header>
         <div class="brand" aria-hidden="true">uncognic</div>
         <nav class="nav-links" role="navigation" aria-label="Main">
@@ -167,21 +172,61 @@
         </nav>
     </header>
 
-    <main class="container" id="blog">
-        <h1>Blog</h1>
+    <main class="container" id="home">
+        <div>
+            <h1>Home</h1>
+            <p>Welcome to my personal site! I'm Uncognic, a student and developer passionate about low-level
+                programming,
+                operating systems, and software development. Here you can find information about me, my skills, and some
+                of the projects I've worked on.</p>
+        </div>
 
-        <section class="posts" aria-labelledby="blog">
-            <ul id="posts-list">
-                <li class="post">
-                    <div>
-                        <a class="title" href="placeholder/" aria-hidden="true">No posts yet</a>
-                        <p class="excerpt">This is a placeholder. Blog posts will appear here soon.</p>
-                    </div>
-                    <time datetime="">—</time>
+        <h2 id="contact">Contact</h2>
+        <ul>
+            <li>Discord: uncognic</li>
+            <li>GitHub: <a href="https://github.com/uncognic" target="_blank" rel="noopener noreferrer">uncognic</a>
+            </li>
+            <li>Email: <a href="mailto:uncognic@proton.me">uncognic@proton.me</a></li>
+        </ul>
+
+        <h2 id="skills">Skills</h2>
+        <section class="skills" aria-labelledby="skills" style="text-align:left;">
+            <img src="https://skillicons.dev/icons?i=linux,windows,cpp,c,cs,rust,java,kotlin,python,qt,html,css,git"
+                alt="Skills" />
+        </section>
+
+        <h2 id="projects">Projects</h2>
+        <section class="projects" aria-labelledby="projects">
+            <ul id="projects-list">
+                <li><a href="https://github.com/uncognic/blackbox" target="_blank"
+                        rel="noopener noreferrer">Blackbox</a>
+                    <p>A minimal, Turing-complete bytecode virtual machine with a custom assembly language written in C
+                    </p>
+                </li>
+                <li><a href="https://github.com/uncognic/wincord" target="_blank" rel="noopener noreferrer">Wincord</a>
+                    <p>Small and lightweight Discord client written in .NET 4.8 WinForms and C#. </p>
+                </li>
+                <li><a href="https://github.com/uncognic/xcore" target="_blank" rel="noopener noreferrer">Xcore</a>
+                    <p>Operating system for i686 written in C and Assembly</p>
+                </li>
+                <li><a href="https://github.com/uncognic/wwwd" target="_blank" rel="noopener noreferrer">wwwd</a>
+                    <p>Small HTTP server written in Rust</p>
+                </li>
+                <li><a href="https://github.com/uncognic/xdata" target="_blank" rel="noopener noreferrer">Xdata</a>
+                    <p>Minimal filesystem written in Rust (WIP)</p>
+                </li>
+                <li><a href="https://github.com/uncognic/linux-utils" target="_blank"
+                        rel="noopener noreferrer">linux-utils</a>
+                    <p>Coreutils written in C</p>
+                </li>
+                <li><a href="https://github.com/uncognic/rcopy-gui" target="_blank"
+                        rel="noopener noreferrer">rcopy-gui</a>
+                    <p>A simple GUI for Robocopy written in C#</p>
                 </li>
             </ul>
         </section>
     </main>
+
 </body>
 
 </html>
