@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="../tux.ico">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — Uncognic's site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #121212;
+            --surface: #1e1e1e;
+            --card: #141414;
+            --text: #e6e6e6;
+            --muted: #cfcfcf;
+            --accent: #82aaff;
+            --header-bg: rgba(30, 30, 30, 0.9);
+            --shadow: rgba(0, 0, 0, 0.5);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+            background: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transition: background .22s ease, color .22s ease;
+            line-height: 1.6;
+            letter-spacing: 0.2px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: var(--header-bg);
+            backdrop-filter: blur(6px);
+            padding: 8px 16px;
+            padding-left: max(16px, env(safe-area-inset-left));
+            padding-right: max(16px, env(safe-area-inset-right));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            z-index: 1000;
+            box-shadow: 0 2px 8px var(--shadow);
+            color: var(--text);
+            overflow: visible;
+        }
+
+        .brand {
+            font-weight: 700;
+            color: var(--accent);
+            position: absolute;
+            left: max(16px, env(safe-area-inset-left));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            margin: 90px auto 40px auto;
+            max-width: 900px;
+            padding: 0 16px;
+        }
+
+        .posts {
+            margin-top: 1em;
+            padding: 1em;
+            background-color: var(--surface);
+            border-radius: 10px;
+        }
+
+        .posts ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            background: var(--card);
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 12px;
+            align-items: start;
+            transition: transform .12s ease, box-shadow .12s ease;
+            box-shadow: 0 1px 4px rgba(0,0,0,.4);
+        }
+
+        .post:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 22px rgba(0,0,0,.6);
+        }
+
+        .post a.title {
+            color: var(--accent);
+            font-weight: 700;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .post p.excerpt {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .post time {
+            color: var(--muted);
+            font-size: 0.85rem;
+            white-space: nowrap;
+            margin-left: 12px;
+        }
+
+        @media (max-width: 560px) {
+            .post {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color .18s ease, opacity .12s ease;
+        }
+
+        a:visited {
+            color: var(--accent);
+            opacity: .9;
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--accent);
+            text-decoration: underline;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand" aria-hidden="true">Ilyas</div>
+        <nav class="nav-links" role="navigation" aria-label="Main">
+            <a href="https://uncognic.me/">Home</a>
+            <a href="https://uncognic.me/blog">Blog</a>
+        </nav>
+    </header>
+
+    <main class="container" id="blog">
+        <h1>Blog</h1>
+
+        <section class="posts" aria-labelledby="blog">
+            <ul id="posts-list">
+                <li class="post">
+                    <div>
+                        <a class="title" href="#" aria-hidden="true">No posts yet</a>
+                        <p class="excerpt">This is a placeholder — blog posts will appear here soon.</p>
+                    </div>
+                    <time datetime="">—</time>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
