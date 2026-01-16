@@ -7,21 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>selfhosted - uncognic</title>
     <meta property="og:title" content="uncognic - selfhosted" />
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Cascadia+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Cascadia+Code:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../home/styles.css">
 </head>
 
 <body>
     <div class="wrap">
-        <header class="sitebar" role="banner">
-            <div class="logo" aria-hidden="true">uncognic</div>
-            <nav class="items" role="navigation" aria-label="Main">
-                <a class="item" href="/home">home</a>
-                <a class="item" href="/blog">blog</a>
-                <a class="item" href="/selfhosted/">selfhosted</a>
-                <a class="item" href="https://github.com/uncognic" target="_blank" rel="noopener noreferrer">github</a>
-            </nav>
-        </header>
+        <div id="site-header" aria-hidden="true"></div>
 
         <div class="marquee" aria-hidden="true">
             <div class="line">i like c.</div>
@@ -33,7 +27,9 @@
                 <p style="font-size:13px">services I run on my home server. click an entry to open its web ui.</p>
 
                 <h2>contact</h2>
-                <p style="font-size:13px">discord: uncognic<br>github: <a href="https://github.com/uncognic" target="_blank" rel="noopener noreferrer">uncognic</a><br>email: <a href="mailto:ilyas@1707070.xyz">ilyas@1707070.xyz</a></p>
+                <p style="font-size:13px">discord: uncognic<br>github: <a href="https://github.com/uncognic"
+                        target="_blank" rel="noopener noreferrer">uncognic</a><br>email: <a
+                        href="mailto:ilyas@1707070.xyz">ilyas@1707070.xyz</a></p>
 
                 <hr style="border:none;border-top:1px dashed rgba(255,255,255,0.02);margin:10px 0;">
             </aside>
@@ -43,6 +39,10 @@
                 <p style="margin-bottom:8px;color:var(--muted)">a curated list of services I host and maintain.</p>
 
                 <section class="projects" aria-labelledby="selfhosted" style="margin-top:10px;">
+                    <a class="proj" href="/nettools/">
+                        <strong>nettools</strong>
+                        <div style="font-size:12px;color:var(--muted)">network information</div>
+                    </a>
                     <a class="proj" href="https://jellyfin.1707070.xyz/" target="_blank" rel="noopener noreferrer">
                         <strong>jellyfin</strong>
                         <div style="font-size:12px;color:var(--muted)">selfhosted media server</div>
@@ -71,11 +71,13 @@
 
                 <hr style="border:none;border-top:1px dashed rgba(255,255,255,0.02);margin:12px 0;">
 
-                <p style="font-size:13px;color:var(--muted)">some services require auth</p> 
-                <p style="font-size:13px;color:var(--muted)">downtime should be expected; it's hosted on a 15 year old home pc</p>
+                <p style="font-size:13px;color:var(--muted)">some services require auth</p>
+                <p style="font-size:13px;color:var(--muted)">downtime should be expected; it's hosted on a 15 year old
+                    home pc</p>
             </main>
         </div>
     </div>
+    <script src="/scripts/include-header.js"></script>
 </body>
 
 </html>

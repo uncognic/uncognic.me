@@ -2,25 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>placeholder - uncognic</title>
     <link rel="icon" type="image/x-icon" href="/tux.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Cascadia+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Cascadia+Code:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/home/styles.css">
 </head>
 
 <body>
     <div class="wrap">
-        <header class="sitebar" role="banner">
-            <div class="logo" aria-hidden="true">uncognic</div>
-            <nav class="items" role="navigation" aria-label="Main">
-                <a class="item" href="/home">home</a>
-                <a class="item" href="/blog">blog</a>
-                <a class="item" href="/selfhosted/">selfhosted</a>
-                <a class="item" href="https://github.com/uncognic" target="_blank" rel="noopener noreferrer">github</a>
-            </nav>
-        </header>
+        <div id="site-header" aria-hidden="true"></div>
+
         <div class="marquee" aria-hidden="true">
             <div class="line">
                 <span class="spin-item">i like C.</span>
@@ -30,7 +25,8 @@
         <main class="panel" id="post" role="main">
             <article>
                 <h1 style="margin:0 0 8px;color:var(--accent)">placeholder</h1>
-                <div class="meta" style="color:var(--muted);font-size:13px;margin-bottom:16px">jan 11, 2026 — uncognic</div>
+                <div class="meta" style="color:var(--muted);font-size:13px;margin-bottom:16px">jan 11, 2026 — uncognic
+                </div>
 
                 <p style="color:var(--muted);margin:0 0 12px;">placeholder</p>
 
@@ -40,6 +36,8 @@
             </article>
         </main>
     </div>
+
+    <script src="/scripts/include-header.js"></script>
 </body>
 
 </html>
