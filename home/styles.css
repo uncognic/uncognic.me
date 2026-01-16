@@ -101,9 +101,9 @@ nav.items {
     overflow: hidden;
     border-radius: 6px;
     border: 1px solid var(--border);
-    background: linear-gradient(90deg, rgba(255,255,255,0.005), rgba(0,0,0,0.06));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.005), rgba(0, 0, 0, 0.06));
     padding: 6px 8px;
-    font-size: 13px; 
+    font-size: 13px;
     max-height: 36px;
 }
 
@@ -118,8 +118,13 @@ nav.items {
 }
 
 @keyframes scroll {
-    0%   { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .grid {

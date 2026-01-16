@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="../tux.ico">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nettools - uncognic</title>
+    <meta property="og:title" content="uncognic - nettools" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Cascadia+Code:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../home/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="site-header" aria-hidden="true"></div>
+        <div class="marquee" aria-hidden="true">
+            <div class="line">i like c.</div>
+        </div>
+
+        <main class="panel" role="main">
+            <h1>nettools</h1>
+
+            <div id="info" style="margin-top:12px;color:var(--muted);font-size:14px">
+                <p>public IP: <span id="pub-ip">loading…</span></p>
+                <p>hostname: <span id="hostname">loading…</span></p>
+                <p>isp: <span id="org">loading…</span></p>
+                <p>city: <span id="city">loading…</span></p>
+                <p>region: <span id="region">loading…</span></p>
+                <p>country: <span id="country">loading…</span></p>
+                <p>loc: <span id="loc">loading…</span></p>
+                <p>postal: <span id="postal">loading…</span></p>
+                <p>timezone: <span id="timezone">loading…</span></p>
+                <p>user agent: <span id="ua">loading…</span></p>
+            </div>
+
+            <div style="margin-top:12px">
+                <a class="old-btn" href="/selfhosted/" style="text-decoration:none">&lt;- back</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="getinfo.js"></script>
+    <script src="/scripts/include-header.js"></script>
+</body>
+
+</html>
