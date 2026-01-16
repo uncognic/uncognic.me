@@ -1,231 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>uncognic — home</title>
     <link rel="icon" type="image/x-icon" href="../tux.ico">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - uncognic's site</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #121212;
-            --surface: #1e1e1e;
-            --card: #141414;
-            --text: #e6e6e6;
-            --muted: #cfcfcf;
-            --accent: #82aaff;
-            --header-bg: rgba(30, 30, 30, 0.9);
-            --shadow: rgba(0, 0, 0, 0.5);
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
-            background: var(--bg);
-            color: var(--text);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            transition: background .22s ease, color .22s ease;
-            line-height: 1.6;
-            letter-spacing: 0.2px;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: var(--header-bg);
-            backdrop-filter: blur(6px);
-            padding: 8px 16px;
-            padding-left: max(16px, env(safe-area-inset-left));
-            padding-right: max(16px, env(safe-area-inset-right));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            z-index: 1000;
-            box-shadow: 0 2px 8px var(--shadow);
-            color: var(--text);
-            overflow: visible;
-        }
-
-        .brand {
-            font-weight: 700;
-            color: var(--accent);
-            position: absolute;
-            left: max(16px, env(safe-area-inset-left));
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            margin: 90px auto 40px auto;
-            max-width: 900px;
-            padding: 0 16px;
-        }
-
-        .projects {
-            margin-top: 1em;
-            padding: 1em;
-            background-color: var(--surface);
-            border-radius: 10px;
-        }
-
-        .projects ul {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 12px;
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
-
-        .projects li {
-            background: var(--card);
-            padding: 12px;
-            border-radius: 8px;
-            transition: transform .18s ease, box-shadow .18s ease;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
-        }
-
-        .projects li:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 8px 22px rgba(0, 0, 0, .6);
-        }
-
-        .projects a {
-            color: var(--accent);
-            font-weight: 700;
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .projects p {
-            margin: 0;
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        @media (max-width: 560px) {
-            header {
-                padding: 8px;
-            }
-
-            .nav-links {
-                gap: 8px;
-            }
-
-            .projects ul {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .skills img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: color .18s ease, opacity .12s ease;
-        }
-
-        a:visited {
-            color: var(--accent);
-            opacity: .9;
-        }
-
-        a:hover,
-        a:focus {
-            color: var(--accent);
-            text-decoration: underline;
-            outline: none;
-        }
-    </style>
+    <meta property="og:title" content="uncognic - home" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Cascadia+Code:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
+    <div class="wrap">
+        <header class="sitebar" role="banner">
+            <div class="logo" aria-hidden="true">uncognic</div>
+            <nav class="items" role="navigation" aria-label="Main">
+                <a class="item" href="/home">home</a>
+                <a class="item" href="/blog">blog</a>
+                <a class="item" href="/selfhosted/">selfhosted</a>
+                <a class="item" href="https://github.com/uncognic" target="_blank" rel="noopener noreferrer">github</a>
+            </nav>
+        </header>
 
-    <header>
-        <div class="brand" aria-hidden="true">uncognic</div>
-        <nav class="nav-links" role="navigation" aria-label="Main">
-            <a href="/home">Home</a>
-            <a href="/blog">Blog</a>
-            <a href="/selfhosted/">Selfhosted</a>
-        </nav>
-    </header>
-
-    <main class="container" id="home">
-        <div>
-            <h1>Home</h1>
-            <p>Welcome to my site! I'm uncognic, a student and developer passionate about low-level programming, operating systems, and software development. I also <a href="/selfhosted">selfhost</a> stuff. Here you can find information about me, my skills, and some of the projects I've worked on.</p>
+        <div class="marquee" aria-hidden="true">
+            <div class="line">
+                <span class="spin-item">I like C.</span>
+            </div>
         </div>
 
-        <h2 id="contact">Contact</h2>
-        <ul>
-            <li>Discord: uncognic</li>
-            <li>GitHub: <a href="https://github.com/uncognic" target="_blank" rel="noopener noreferrer">uncognic</a>
-            </li>
-            <li>Email: <a href="mailto:ilyas@1707070.xyz">ilyas@1707070.xyz</a></li>
-        </ul>
+        <div class="grid">
+            <aside class="panel" aria-labelledby="me">
+                <h1 id="me">about</h1>
+                <p style="font-size:13px">I'm uncognic, a student and developer passionate about low-level programming, operating systems, and software development. I also selfhost stuff. Here you can find information about me, my skills, and some of the projects I've worked on.</p>
 
-        <h2 id="skills">Skills</h2>
-        <p>I like C.</p>
-        <section class="skills" aria-labelledby="skills" style="text-align:left;">
-            <img src="https://skillicons.dev/icons?i=linux,windows,cpp,c,cs,rust,java,kotlin,python,qt,html,css,git"
-                alt="Skills" />
-        </section>
-
-        <h2 id="projects">Projects</h2>
-        <section class="projects" aria-labelledby="projects">
-            <ul id="projects-list">
-                <li><a href="https://github.com/uncognic/blackbox" target="_blank"
-                        rel="noopener noreferrer">Blackbox</a>
-                    <p>A minimal, Turing-complete bytecode virtual machine with a custom assembly language written in C
+                <h2>contact</h2>
+                <p style="font-size:13px">discord: uncognic<br>github: 
+                        <a href="https://github.com/uncognic" target="_blank" rel="noopener noreferrer">uncognic</a><br>email: 
+                        <a href="mailto:ilyas@1707070.xyz">ilyas@1707070.xyz</a>
                     </p>
-                </li>
-                <li><a href="https://github.com/uncognic/wincord" target="_blank" rel="noopener noreferrer">Wincord</a>
-                    <p>Small and lightweight Discord client written in .NET 4.8 WinForms and C#. </p>
-                </li>
-                <li><a href="https://github.com/uncognic/xcore" target="_blank" rel="noopener noreferrer">Xcore</a>
-                    <p>Operating system for i686 written in C and Assembly</p>
-                </li>
-                <li><a href="https://github.com/uncognic/wwwd" target="_blank" rel="noopener noreferrer">wwwd</a>
-                    <p>Small HTTP server written in Rust</p>
-                </li>
-                <li><a href="https://github.com/uncognic/xdata" target="_blank" rel="noopener noreferrer">Xdata</a>
-                    <p>Minimal filesystem written in Rust (WIP)</p>
-                </li>
-                <li><a href="https://github.com/uncognic/linux-utils" target="_blank"
-                        rel="noopener noreferrer">linux-utils</a>
-                    <p>Coreutils written in C</p>
-                </li>
-                <li><a href="https://github.com/uncognic/rcopy-gui" target="_blank"
-                        rel="noopener noreferrer">rcopy-gui</a>
-                    <p>A simple GUI for Robocopy written in C#</p>
-                </li>
-            </ul>
-        </section>
-    </main>
 
+                <hr style="border:none;border-top:1px dashed rgba(255,255,255,0.02);margin:10px 0;">
+            </aside>
+
+            <main class="panel" role="main">
+                <h1>home</h1>
+                <p>Welcome. </p>
+
+                <h2>skills</h2>
+                <div style="margin-bottom:8px">
+                    <span class="chip">low-level</span>
+                    <span class="chip">systems</span>
+                </div>
+                <section class="skills" style="margin-top:6px;">
+                    <img src="https://skillicons.dev/icons?i=linux,cpp,c,cs,rust,python,html,css,git" alt="skills"
+                        style="max-width:100%;height:auto;border-radius:6px;border:1px solid rgba(255,255,255,0.02)" width="400"/>
+                </section>
+
+                <h2>projects</h2>
+                <div class="projects">
+                    <a class="proj" href="https://github.com/uncognic/blackbox" target="_blank"
+                        rel="noopener noreferrer"><strong>Blackbox</strong>
+                        <div style="font-size:12px;color:var(--muted)">bytecode VM · C</div>
+                    </a>
+                    <a class="proj" href="https://github.com/uncognic/xcore" target="_blank"
+                        rel="noopener noreferrer"><strong>Xcore</strong>
+                        <div style="font-size:12px;color:var(--muted)">i686 OS · C + ASM</div>
+                    </a>
+                    <a class="proj" href="https://github.com/uncognic/wwwd" target="_blank"
+                        rel="noopener noreferrer"><strong>wwwd</strong>
+                        <div style="font-size:12px;color:var(--muted)">tiny HTTP server · Rust</div>
+                    </a>
+                    <a class="proj" href="https://github.com/uncognic/linux-utils" target="_blank"
+                        rel="noopener noreferrer"><strong>linux-utils</strong>
+                        <div style="font-size:12px;color:var(--muted)">coreutils · C</div>
+                    </a>
+                </div>
+
+                <hr style="border:none;border-top:1px dashed rgba(255,255,255,0.02);margin:12px 0;">
+            </main>
+        </div>
+    </div>
 </body>
 
 </html>
