@@ -13,16 +13,7 @@
 
 <body>
     <div class="wrap">
-        <header class="sitebar" role="banner">
-            <div class="logo" aria-hidden="true">uncognic</div>
-            <nav class="items" role="navigation" aria-label="Main">
-                <a class="item" href="/home">home</a>
-                <a class="item" href="/blog">blog</a>
-                <a class="item" href="/selfhosted/">selfhosted</a>
-                <a class="item" href="/nettools/">nettools</a>
-                <a class="item" href="https://github.com/uncognic" target="_blank" rel="noopener noreferrer">github</a>
-            </nav>
-        </header>
+        <div id="site-header" aria-hidden="true"></div>
         <div class="marquee" aria-hidden="true">
             <div class="line">i like c.</div>
         </div>
@@ -49,31 +40,8 @@
         </main>
     </div>
 
-    <script>
-        async function loadInfo() {
-            try {
-                const res = await fetch('https://ipinfo.io/json');
-                const j = await res.json();
-
-                document.getElementById('pub-ip').textContent = j.ip || 'unknown';
-                document.getElementById('hostname').textContent = j.hostname || 'unknown';
-                document.getElementById('org').textContent = j.org || 'unknown';
-                document.getElementById('city').textContent = j.city || 'unknown';
-                document.getElementById('region').textContent = j.region || 'unknown';
-                document.getElementById('country').textContent = j.country || 'unknown';
-                document.getElementById('loc').textContent = j.loc || 'unknown';
-                document.getElementById('postal').textContent = j.postal || 'unknown';
-                document.getElementById('timezone').textContent = j.timezone || 'unknown';
-            } catch (e) {
-                ['pub-ip','hostname','org','city','region','country','loc','postal','timezone'].forEach(id => {
-                    document.getElementById(id).textContent = 'error';
-                });
-            }
-
-            document.getElementById('ua').textContent = navigator.userAgent || 'n/a';
-        }
-        loadInfo();
-    </script>
+    <script src="getinfo.js"></script>
+    <script src="/scripts/include-header.js"></script>
 </body>
 
 </html>

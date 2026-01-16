@@ -2,17 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>placeholder - uncognic</title>
     <link rel="icon" type="image/x-icon" href="/tux.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Cascadia+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Cascadia+Code:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/home/styles.css">
 </head>
 
 <body>
     <div class="wrap">
-        <!-- injected header -->
         <div id="site-header" aria-hidden="true"></div>
 
         <div class="marquee" aria-hidden="true">
@@ -24,7 +25,8 @@
         <main class="panel" id="post" role="main">
             <article>
                 <h1 style="margin:0 0 8px;color:var(--accent)">placeholder</h1>
-                <div class="meta" style="color:var(--muted);font-size:13px;margin-bottom:16px">jan 11, 2026 — uncognic</div>
+                <div class="meta" style="color:var(--muted);font-size:13px;margin-bottom:16px">jan 11, 2026 — uncognic
+                </div>
 
                 <p style="color:var(--muted);margin:0 0 12px;">placeholder</p>
 
@@ -35,18 +37,7 @@
         </main>
     </div>
 
-    <script>
-    (function(){
-      fetch('/partials/header.html').then(r => {
-        if (!r.ok) throw r;
-        return r.text();
-      }).then(html => {
-        document.getElementById('site-header').innerHTML = html;
-      }).catch(() => {
-        /* optional fallback or console.error */
-      });
-    })();
-    </script>
+    <script src="/scripts/include-header.js"></script>
 </body>
 
 </html>
