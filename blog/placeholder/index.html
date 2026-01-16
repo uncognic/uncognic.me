@@ -12,15 +12,9 @@
 
 <body>
     <div class="wrap">
-        <header class="sitebar" role="banner">
-            <div class="logo" aria-hidden="true">uncognic</div>
-            <nav class="items" role="navigation" aria-label="Main">
-                <a class="item" href="/home">home</a>
-                <a class="item" href="/blog">blog</a>
-                <a class="item" href="/selfhosted/">selfhosted</a>
-                <a class="item" href="https://github.com/uncognic" target="_blank" rel="noopener noreferrer">github</a>
-            </nav>
-        </header>
+        <!-- injected header -->
+        <div id="site-header" aria-hidden="true"></div>
+
         <div class="marquee" aria-hidden="true">
             <div class="line">
                 <span class="spin-item">i like C.</span>
@@ -40,6 +34,19 @@
             </article>
         </main>
     </div>
+
+    <script>
+    (function(){
+      fetch('/partials/header.html').then(r => {
+        if (!r.ok) throw r;
+        return r.text();
+      }).then(html => {
+        document.getElementById('site-header').innerHTML = html;
+      }).catch(() => {
+        /* optional fallback or console.error */
+      });
+    })();
+    </script>
 </body>
 
 </html>
