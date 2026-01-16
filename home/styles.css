@@ -96,13 +96,15 @@ nav.items {
 .marquee {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin: 8px 0 18px;
+    gap: 8px;
+    margin: 6px 0 12px;
     overflow: hidden;
     border-radius: 6px;
     border: 1px solid var(--border);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.005), rgba(0, 0, 0, 0.08));
-    padding: 8px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.005), rgba(0,0,0,0.06));
+    padding: 6px 8px;
+    font-size: 13px; 
+    max-height: 36px;
 }
 
 .marquee .line {
@@ -112,6 +114,7 @@ nav.items {
     will-change: transform;
     animation: scroll 10s linear infinite;
     color: var(--muted);
+    line-height: 1;
 }
 
 @keyframes scroll {
