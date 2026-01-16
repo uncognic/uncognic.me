@@ -5,195 +5,77 @@
     <link rel="icon" type="image/x-icon" href="../tux.ico">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Selfhosted - uncognic's site</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #121212;
-            --surface: #1e1e1e;
-            --card: #141414;
-            --text: #e6e6e6;
-            --muted: #cfcfcf;
-            --accent: #82aaff;
-            --header-bg: rgba(30, 30, 30, 0.9);
-            --shadow: rgba(0, 0, 0, 0.5);
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
-            background: var(--bg);
-            color: var(--text);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            transition: background .22s ease, color .22s ease;
-            line-height: 1.6;
-            letter-spacing: 0.2px;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: var(--header-bg);
-            backdrop-filter: blur(6px);
-            padding: 8px 16px;
-            padding-left: max(16px, env(safe-area-inset-left));
-            padding-right: max(16px, env(safe-area-inset-right));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            z-index: 1000;
-            box-shadow: 0 2px 8px var(--shadow);
-            color: var(--text);
-            overflow: visible;
-        }
-
-        .brand {
-            font-weight: 700;
-            color: var(--accent);
-            position: absolute;
-            left: max(16px, env(safe-area-inset-left));
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            margin: 90px auto 40px auto;
-            max-width: 900px;
-            padding: 0 16px;
-        }
-
-        .services {
-            margin-top: 1em;
-            padding: 1em;
-            background-color: var(--surface);
-            border-radius: 10px;
-        }
-
-        .services ul {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 12px;
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
-
-        .service {
-            background: var(--card);
-            padding: 12px;
-            border-radius: 8px;
-            transition: transform .18s ease, box-shadow .18s ease;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
-        }
-
-        .service:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 8px 22px rgba(0, 0, 0, .6);
-        }
-
-        .service a {
-            color: var(--accent);
-            font-weight: 700;
-            display: block;
-            margin-bottom: 6px;
-            word-break: break-all;
-        }
-
-        .service p {
-            margin: 0;
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        .service .meta {
-            margin-top: 8px;
-            color: var(--muted);
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 560px) {
-            .services ul {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: color .18s ease, opacity .12s ease;
-        }
-
-        a:visited {
-            color: var(--accent);
-            opacity: .9;
-        }
-
-        a:hover,
-        a:focus {
-            color: var(--accent);
-            text-decoration: underline;
-            outline: none;
-        }
-    </style>
+    <title>selfhosted - uncognic</title>
+    <meta property="og:title" content="uncognic - selfhosted" />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Cascadia+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../home/styles.css">
 </head>
 
 <body>
-    <header>
-        <div class="brand" aria-hidden="true">uncognic</div>
-        <nav class="nav-links" role="navigation" aria-label="Main">
-            <a href="/home">Home</a>
-            <a href="/blog">Blog</a>
-            <a href="/selfhosted/">Selfhosted</a>
-        </nav>
-    </header>
+    <div class="wrap">
+        <header class="sitebar" role="banner">
+            <div class="logo" aria-hidden="true">uncognic</div>
+            <nav class="items" role="navigation" aria-label="Main">
+                <a class="item" href="/home">home</a>
+                <a class="item" href="/blog">blog</a>
+                <a class="item" href="/selfhosted/">selfhosted</a>
+                <a class="item" href="https://github.com/uncognic" target="_blank" rel="noopener noreferrer">github</a>
+            </nav>
+        </header>
 
-    <main class="container" id="selfhosted">
-        <h1>Selfhosted Services</h1>
-        <p>Services I currently selfhost on my home server. Click a service to open its web UI.</p>
+        <div class="marquee" aria-hidden="true">
+            <div class="line">i like c.</div>
+        </div>
 
-        <section class="services" aria-labelledby="selfhosted">
-            <ul id="services-list">
-                <li class="service">
-                    <a href="https://jellyfin.1707070.xyz/" target="_blank" rel="noopener noreferrer">Jellyfin</a>
-                    <p>Selfhosted media server</p>
-                </li>
-                <li class="service">
-                    <a href="https://redlib.1707070.xyz/" target="_blank" rel="noopener noreferrer">Redlib</a>
-                    <p>Privacy-respecting Reddit front-end</p>
-                </li>
-                <li class="service">
-                    <a href="https://fmd.1707070.xyz/" target="_blank" rel="noopener noreferrer">FMD-FOSS</a>
-                    <p>FOSS phone tracking server</p>
-                </li>    
-                <li class="service">
-                    <a href="https://immich.1707070.xyz/" target="_blank" rel="noopener noreferrer">Immich</a>
-                    <p>Selfhosted photo and video backup solution</p>
-                </li>
-                <li class="service">
-                    <a href="https://privatebin.1707070.xyz/" target="_blank" rel="noopener noreferrer">PrivateBin</a>
-                    <p>Anonymous and private pastebin</p>
-                </li>
-            </ul>
-        </section>
-    </main>
+        <div class="grid" style="margin-top:0;">
+            <aside class="panel" aria-labelledby="about">
+                <h2 id="about">about</h2>
+                <p style="font-size:13px">services I run on my home server. click an entry to open its web ui.</p>
+
+                <h2>contact</h2>
+                <p style="font-size:13px">discord: uncognic<br>github: <a href="https://github.com/uncognic" target="_blank" rel="noopener noreferrer">uncognic</a><br>email: <a href="mailto:ilyas@1707070.xyz">ilyas@1707070.xyz</a></p>
+
+                <hr style="border:none;border-top:1px dashed rgba(255,255,255,0.02);margin:10px 0;">
+            </aside>
+
+            <main class="panel" role="main" id="selfhosted">
+                <h1>selfhosted services</h1>
+                <p style="margin-bottom:8px;color:var(--muted)">a curated list of services I host and maintain.</p>
+
+                <section class="projects" aria-labelledby="selfhosted" style="margin-top:10px;">
+                    <a class="proj" href="https://jellyfin.1707070.xyz/" target="_blank" rel="noopener noreferrer">
+                        <strong>jellyfin</strong>
+                        <div style="font-size:12px;color:var(--muted)">selfhosted media server</div>
+                    </a>
+
+                    <a class="proj" href="https://redlib.1707070.xyz/" target="_blank" rel="noopener noreferrer">
+                        <strong>redlib</strong>
+                        <div style="font-size:12px;color:var(--muted)">privacy-respecting reddit front-end</div>
+                    </a>
+
+                    <a class="proj" href="https://fmd.1707070.xyz/" target="_blank" rel="noopener noreferrer">
+                        <strong>fmd‑foss</strong>
+                        <div style="font-size:12px;color:var(--muted)">foss phone tracking server</div>
+                    </a>
+
+                    <a class="proj" href="https://immich.1707070.xyz/" target="_blank" rel="noopener noreferrer">
+                        <strong>immich</strong>
+                        <div style="font-size:12px;color:var(--muted)">photo and video backup service</div>
+                    </a>
+
+                    <a class="proj" href="https://privatebin.1707070.xyz/" target="_blank" rel="noopener noreferrer">
+                        <strong>privatebin</strong>
+                        <div style="font-size:12px;color:var(--muted)">anonymous encrypted pastebin</div>
+                    </a>
+                </section>
+
+                <hr style="border:none;border-top:1px dashed rgba(255,255,255,0.02);margin:12px 0;">
+
+                <p style="font-size:13px;color:var(--muted)">some services require auth</p> 
+                <p style="font-size:13px;color:var(--muted)">downtime should be expected; it's hosted on a 15 year old home pc</p>
+            </main>
+        </div>
+    </div>
 </body>
 
 </html>
