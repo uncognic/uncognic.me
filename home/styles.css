@@ -1,83 +1,79 @@
 :root {
-    --bg: #0b0b0b;
-    --panel: #0f0f0f;
-    --text: #e6e6e6;
-    --muted: #9a9a9a;
-    --border: #222222;
-    --link: #cfcfcf;
+    --bg: #808080;      /* windows 98 desktop grey */
+    --panel: #c0c0c0;   /* window face */
+    --text: #000000;
+    --muted: #333333;
+    --border: #808080;  /* classic 3D border middle */
+    --shadow: #404040;  /* lower/right border */
+    --highlight: #ffffff; /* upper/left border */
+    --link: #0000ee;    /* classic link blue */
 }
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
-html,
-body {
+/* system font stack like Windows 98 */
+html, body {
     height: 100%;
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 1.35;
-    font-size: 13px;
+    font-family: Tahoma, "MS Sans Serif", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
 }
 
+/* outer window */
 .wrap {
     max-width: 980px;
     margin: 20px auto;
     padding: 12px;
-    background: transparent;
-    border: 1px solid var(--border);
+    background: var(--panel);
+    /* classic 2px 3D border: top/left light, bottom/right dark */
+    border-top: 2px solid var(--highlight);
+    border-left: 2px solid var(--highlight);
+    border-bottom: 2px solid var(--shadow);
+    border-right: 2px solid var(--shadow);
 }
 
+/* header bar (not a modern rounded one) */
 #site-header {
-    height: 36px;
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 24px 12px 24px;
-    border: 1px solid var(--border);
+    padding: 8px 12px;
     background: var(--panel);
     color: var(--muted);
     font-size: 13px;
-    border-radius: 0;
+    border-top: 2px solid var(--highlight);
+    border-left: 2px solid var(--highlight);
+    border-bottom: 2px solid var(--shadow);
+    border-right: 2px solid var(--shadow);
+    margin-bottom: 8px;
 }
+
+/* window panels */
 .panel {
     background: var(--panel);
-    border: 1px solid var(--border);
-    padding: 12px;
-    border-radius: 0;
+    padding: 10px;
     color: var(--text);
+    border-top: 2px solid var(--highlight);
+    border-left: 2px solid var(--highlight);
+    border-bottom: 2px solid var(--shadow);
+    border-right: 2px solid var(--shadow);
+    margin-bottom: 8px;
 }
 
-
-@keyframes scroll {
-    0% {
-        transform: translateX(100%)
-    }
-
-    100% {
-        transform: translateX(-100%)
-    }
-}
-
+/* layout */
 .grid {
     display: grid;
     grid-template-columns: 240px 1fr;
-    gap: 16px;
-    margin-top: 8px;
+    gap: 12px;
+    margin-top: 4px;
 }
 
-.panel {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    padding: 12px;
-    border-radius: 0;
-    color: var(--text);
-}
-
+/* text styles */
 aside.panel p,
 main.panel p {
     color: var(--muted);
@@ -85,33 +81,42 @@ main.panel p {
     margin: 6px 0;
 }
 
-h1,
-h2 {
+h1, h2 {
     margin: 6px 0;
     color: var(--text);
-    font-weight: 600;
-    text-transform: lowercase;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 16px;
 }
 
+/* classic 3D button/chip */
 .chip {
     display: inline-block;
-    border: 1px solid var(--border);
-    padding: 4px 7px;
-    margin-right: 6px;
-    color: var(--muted);
-    background: transparent;
+    padding: 3px 8px;
     font-size: 12px;
-    border-radius: 0;
+    color: var(--text);
+    background: var(--bg);
+    cursor: default;
+    border-top: 2px solid var(--highlight);
+    border-left: 2px solid var(--highlight);
+    border-bottom: 2px solid var(--shadow);
+    border-right: 2px solid var(--shadow);
+    margin-right: 6px;
 }
 
+/* skills images: simple framed image */
 .skills img {
-    border: 1px solid var(--border);
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 0;
+    background: #fff;
+    border-top: 2px solid var(--highlight);
+    border-left: 2px solid var(--highlight);
+    border-bottom: 2px solid var(--shadow);
+    border-right: 2px solid var(--shadow);
 }
 
+/* projects list: simple list items with solid frame */
 .projects {
     display: block;
     margin-top: 8px;
@@ -119,13 +124,15 @@ h2 {
 
 .proj {
     display: block;
-    padding: 10px;
-    border: 1px solid var(--border);
-    margin-bottom: 8px;
+    padding: 8px;
+    margin-bottom: 6px;
     text-decoration: none;
     color: var(--text);
-    background: transparent;
-    border-radius: 0;
+    background: var(--panel);
+    border-top: 2px solid var(--highlight);
+    border-left: 2px solid var(--highlight);
+    border-bottom: 2px solid var(--shadow);
+    border-right: 2px solid var(--shadow);
 }
 
 .proj strong {
@@ -140,22 +147,28 @@ h2 {
     margin-top: 4px;
 }
 
-.proj:hover {
-    background: rgba(255, 255, 255, 0.02);
+/* hover emulate pressed button (invert 3D) */
+.proj:hover,
+.chip:active {
+    border-top: 2px solid var(--shadow);
+    border-left: 2px solid var(--shadow);
+    border-bottom: 2px solid var(--highlight);
+    border-right: 2px solid var(--highlight);
 }
 
+/* links: classic blue with standard underline */
 a {
     color: var(--link);
     text-decoration: underline;
-    text-underline-offset: 2px;
 }
 
 a:visited {
-    color: var(--muted)
+    color: #551A8B;
 }
 
+/* address: monospace like terminal */
 .addr {
-    font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    font-family: "Courier New", Courier, monospace;
     color: var(--muted);
     background: transparent;
     border: 1px solid transparent;
@@ -163,39 +176,32 @@ a:visited {
     display: inline-block;
 }
 
+/* divider */
 hr {
     border: none;
-    border-top: 1px dashed rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(0,0,0,0.1);
     margin: 10px 0;
 }
 
+/* footer */
 .tiny-footer {
     font-size: 12px;
     color: var(--muted);
     text-align: center;
-    padding: 12px 0;
-    margin-top: 18px;
+    padding: 8px 0;
+    margin-top: 12px;
     border-top: 1px solid var(--border);
 }
 
+/* responsive: keep things simple on small screens */
 @media (max-width:720px) {
-    .wrap {
-        margin: 12px;
-        padding: 10px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    #site-header {
-        height: 30px;
-        font-size: 12px;
-    }
+    .wrap { margin: 12px; padding: 8px; }
+    .grid { grid-template-columns: 1fr; }
+    #site-header { font-size: 13px; padding: 6px 8px; }
 }
 
+/* ensure long addresses wrap */
 .addr {
-    font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     display: inline-block;
     max-width: 100%;
     overflow-wrap: anywhere;
