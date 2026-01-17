@@ -37,12 +37,19 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 6px 8px;
-    border-bottom: 1px solid var(--border);
+    padding: 24px 12px 24px;
+    border: 1px solid var(--border);
     background: var(--panel);
     color: var(--muted);
     font-size: 13px;
     border-radius: 0;
+}
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 12px;
+    border-radius: 0;
+    color: var(--text);
 }
 
 
