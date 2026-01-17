@@ -26,6 +26,14 @@ a {
     text-decoration: none;
     outline: none;
 }
+.addr {
+        font-family: "Cascadia Code", ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+        display: inline-block;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        white-space: normal;
+    }
 
 a:hover {
     color: var(--accent);
