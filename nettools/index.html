@@ -13,27 +13,31 @@
 <body>
     <div class="wrap">
         <div id="site-header" aria-hidden="true"></div>
+        <div class="grid">
+            <div id="site-about" class="panel" aria-hidden="true"></div>
 
-        <main class="panel" role="main">
-            <h1>nettools</h1>
+            <main class="panel" role="main">
+                <h1>nettools</h1>
 
-            <div id="info" style="margin-top:12px;color:var(--muted);font-size:14px">
-                <p>public IP: <span id="pub-ip">loading…</span></p>
-                <p>hostname: <span id="hostname">loading…</span></p>
-                <p>isp: <span id="org">loading…</span></p>
-                <p>city: <span id="city">loading…</span></p>
-                <p>region: <span id="region">loading…</span></p>
-                <p>country: <span id="country">loading…</span></p>
-                <p>loc: <span id="loc">loading…</span></p>
-                <p>postal: <span id="postal">loading…</span></p>
-                <p>timezone: <span id="timezone">loading…</span></p>
-                <p>user agent: <span id="ua">loading…</span></p>
-            </div>
+                <div id="info" style="margin-top:12px;color:var(--muted);font-size:14px">
+                    <p>public IP: <span id="pub-ip">loading…</span></p>
+                    <p>hostname: <span id="hostname">loading…</span></p>
+                    <p>isp: <span id="org">loading…</span></p>
+                    <p>city: <span id="city">loading…</span></p>
+                    <p>region: <span id="region">loading…</span></p>
+                    <p>country: <span id="country">loading…</span></p>
+                    <p>loc: <span id="loc">loading…</span></p>
+                    <p>postal: <span id="postal">loading…</span></p>
+                    <p>timezone: <span id="timezone">loading…</span></p>
+                    <p>user agent: <span id="ua">loading…</span></p>
+                </div>
 
-            <div style="margin-top:12px">
-                <a class="old-btn" href="/selfhosted/" style="text-decoration:none">&lt;- back</a>
-            </div>
-        </main>
+                <div style="margin-top:12px">
+                    <a class="old-btn" href="/selfhosted/" style="text-decoration:none">&lt;- back</a>
+                </div>
+            </main>
+        </div>
+
         <footer class="tiny-footer" role="contentinfo"
             style="font-size:12px;color:var(--muted);text-align:center;padding:12px 0;margin-top:18px;">
             MMXXVI - uncognic
@@ -41,6 +45,7 @@
     </div>
 
     <script src="getinfo.js"></script>
+    <script src="/scripts/include-about.js"></script>
     <script src="/scripts/include-header.js"></script>
 </body>
 
