@@ -1,11 +1,11 @@
 :root {
     --bg: #0a0a0a;
-    --panel: #121212;
-    --panel-alt: #161616;
-    --text: #e2e2e2;
-    --muted: #9b9b9b;
-    --border: #2b2b2b;
-    --border-strong: #3a3a3a;
+    --panel: #111;
+    --panel-alt: #181818;
+    --border: #303030;
+    --border-strong: #4a4a4a;
+    --text: #ededed;
+    --muted: #a0a0a0;
     --link: #d8d8d8;
 }
 
@@ -21,7 +21,7 @@ body {
     color: var(--text);
     font-family: Arial, Verdana, Helvetica, sans-serif;
     font-size: 13px;
-    line-height: 1.4;
+    line-height: 1.25;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -30,11 +30,6 @@ body::before {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background-image: repeating-linear-gradient(0deg,
-            rgba(255, 255, 255, 0.015),
-            rgba(255, 255, 255, 0.015) 1px,
-            transparent 1px,
-            transparent 2px);
     opacity: 0.35;
     z-index: 9999;
 }
@@ -65,11 +60,14 @@ body::before {
     grid-template-columns: 220px 1fr;
     gap: 18px;
 }
-
+.wrap {
+    background: #0c0c0c;
+}
 .panel {
     padding: 12px;
     background: var(--panel);
     border: 1px solid var(--border);
+    
 }
 
 aside.panel p,
@@ -79,13 +77,12 @@ main.panel p {
     color: var(--muted);
 }
 
-h1,
-h2 {
-    margin: 6px 0 10px;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    text-transform: lowercase;
+h1, h2 {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    border-bottom: 1px dotted rgba(255,255,255,0.15);
+    padding-bottom: 4px;
 }
 
 .chip {
@@ -113,32 +110,28 @@ h2 {
 
 .proj {
     display: block;
-    padding: 8px 6px;
     margin-bottom: 6px;
-
     text-decoration: none;
     color: var(--text);
-
+    border-left: 2px solid #2a2a2a;
+    padding-left: 8px;
 }
 
 .proj:hover {
-    background: rgba(255, 255, 255, 0.03);
-    border-left-color: #4a4a4a;
+    background: rgba(255,255,255,0.04);
+    border-left-color: #6a6a6a;
 }
 
 a {
     color: var(--link);
-    text-decoration: underline;
-    text-underline-offset: 2px;
+    text-decoration: none;
 }
 
 a:hover {
     color: #ffffff;
+    text-decoration: underline;
 }
 
-a:visited {
-    color: #b0b0b0;
-}
 
 .addr {
     font-family: "Courier New", Courier, monospace;
@@ -152,6 +145,10 @@ a:visited {
     max-width: 100%;
     overflow-wrap: anywhere;
 }
+.proj-desc {
+    font-size: 12px;
+    color: var(--muted);
+}
 
 hr {
     border: none;
@@ -160,10 +157,9 @@ hr {
 }
 
 footer {
-    font-size: 12px;
-    color: var(--muted);
+    margin-top: 9px;
+    font-size: 11px;
     text-align: center;
-    margin-top: 12px;
 }
 
 @media (max-width: 720px) {
