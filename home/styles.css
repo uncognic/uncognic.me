@@ -164,8 +164,8 @@ footer {
     margin-top: 9px;
     font-size: 11px;
     text-align: center;
+    color: #555;
 }
-
 @media (max-width: 720px) {
     .wrap {
         margin: 12px;
