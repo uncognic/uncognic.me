@@ -12,10 +12,10 @@
 
 <body>
     <div class="wrap">
-        <div id="site-header" aria-hidden="true"></div>
+        @include("../partials/_header.html")
 
         <div class="grid" style="margin-top:0;">
-             <div id="site-about" class="panel" aria-hidden="true"></div>
+            @include("../partials/_about.html")
 
             <main class="panel" role="main" id="selfhosted">
                 <h1>selfhosted services</h1>
@@ -67,8 +67,6 @@
             MMXXVI - uncognic
         </footer>
     </div>
-    <script src="/scripts/include-about.js"></script>
-    <script src="/scripts/include-header.js"></script>
 </body>
 
 </html>

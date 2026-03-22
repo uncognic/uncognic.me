@@ -11,10 +11,10 @@
 
 <body>
     <div class="wrap">
-        <div id="site-header" aria-hidden="true"></div>
+        @include("../partials/_header.html")
 
         <div class="grid">
-            <div id="site-about" class="panel" aria-hidden="true"></div>
+            @include("../partials/_about.html")
 
             <main class="panel" id="post" role="main">
                 <article>
@@ -35,9 +35,6 @@
             MMXXVI - uncognic
         </footer>
     </div>
-
-    <script src="/scripts/include-about.js"></script>
-    <script src="/scripts/include-header.js"></script>
 </body>
 
 </html>
