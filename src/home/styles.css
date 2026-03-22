@@ -180,3 +180,12 @@ footer {
         font-size: 11px;
     }
 }
+.meta {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+article h1 {
+    margin: 0 0 8px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>"ubuntu bad" - uncognic</title>
+    <link rel="icon" type="image/x-icon" href="/tux.ico">
+    <link rel="stylesheet" href="/home/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        @include("../../partials/_header.html")
+
+        <div class="grid">
+            @include("../../partials/_about.html")
+
+            <main class="panel" id="post" role="main">
+                <article>
+                    <h1>"ubuntu bad"</h1>
+                    <div class="meta">2026-03-22 - uncognic</div>
+                        <p>ubuntu hate is mostly just reddit groupthink. people repeat "snaps are slow, canonical is evil" having likely never actually tried it.</p>
+                        <p>snaps really are not that bad. they aren't as slow as people say (tested on a pentium laptop) and the sandboxing is pretty good too. flatpak has sandboxing too but it's not as seamless as snaps</p>
+                        <p>for example, the snap packages for jetbrains ides and handbrake actually work unlike the flatpaks. ides from flatpak can't detect system toolchains and the handbrake flatpak couldn't see the hardware encoder no matter what</p>
+                        <p>canonical is also really not that bad. canonical's backing means ubuntu actually gets hardware support, oem deals and enterprise use. that's why it works out of the box on more machines than anything else. in the real world, that matters. </p>
+                        <p>the most valid criticism was the amazon search integration back in 2017, that was a real privacy issue and canonical walked it back. but people are still citing it in 2026 as if nothing has changed.</p>
+                        <p>people will also say that "ubuntu collects telemetry" because it asks you on first boot if you want to give useful information to the ubuntu team, but fedora has the exact same feature and yet no one complains about it</p>
+                        <p>to be clear, i'm not glazing canonical. i just think most ubuntu criticism is years out of date and repeated without thinking. be critical, just be accurate.</p>
+                    <div style="margin-top:12px">
+                        <a class="old-btn" href="/blog/" style="text-decoration:none"><- back</a>
+                    </div>
+                </article>
+            </main>
+        </div>
+
+        <footer class="footer">
+            MMXXVI - uncognic
+        </footer>
+    </div>
+</body>
+
+</html>
