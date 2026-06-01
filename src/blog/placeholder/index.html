@@ -1,37 +1,26 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>placeholder - uncognic</title>
+    <title>placeholder</title>
     <link rel="icon" type="image/x-icon" href="/tux.ico">
-    <link rel="stylesheet" href="/home/styles.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-    <div class="wrap">
-        @include("../../partials/_header.html")
+    @include("../../partials/_header.html")
+    @include("../../partials/_sidebar.html")
 
-        <div class="grid">
-            @include("../../partials/_about.html")
+    <article>
+        <h1>placeholder</h1>
+        <div class="meta">jan 11, 2026 &dash; uncognic</div>
+        <p>placeholder</p>
+        <p><a href="/blog/">&lt;- back</a></p>
+    </article>
 
-            <main class="panel" id="post" role="main">
-                <article>
-                    <h1>placeholder</h1>
-                    <div class="meta">jan 11, 2026 - uncognic</div>
-                    <p>placeholder</p>
-                    <div style="margin-top:12px">
-                        <a class="old-btn" href="/blog/" style="text-decoration:none"><- back</a>
-                    </div>
-                </article>
-            </main>
-        </div>
-
-        <footer class="footer">
-            MMXXVI - uncognic
-        </footer>
-    </div>
+    @include("../../partials/_footer.html")
 </body>
 
 </html>

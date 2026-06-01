@@ -1,43 +1,31 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
-    <link rel="icon" type="image/x-icon" href="../tux.ico">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>blog - uncognic's site</title>
-    <meta property="og:title" content="uncognic - blog" />
-    <link rel="stylesheet" href="../home/styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>blog</title>
+    <link rel="icon" type="image/x-icon" href="/tux.ico">
+    <meta property="og:title" content="blog" />
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-    <div class="wrap">
-        @include("../partials/_header.html")
+    @include("../partials/_header.html")
+    @include("../partials/_sidebar.html")
 
-        <div class="grid">
-            @include("../partials/_about.html")
+    <article>
+        <h1>blog</h1>
 
-            <main class="panel" id="blog" role="main">
-                <h1>blog</h1>
+        <ul class="posts">
+            <li>
+                <a href="/blog/placeholder/">placeholder</a>
+                <time datetime="2026-03-22">2026-03-22</time>
+            </li>
+        </ul>
+    </article>
 
-                <section class="posts" aria-labelledby="blog">
-                    <ul id="posts-list">
-                        <li class="post">
-                            <div>
-                                <a class="title" href="placeholder/" aria-hidden="true">"placeholder"</a>
-                                <p class="excerpt">placeholder</p>
-                            </div>
-                            <time datetime="2026-03-22">2026-03-22</time>
-                        </li>
-                    </ul>
-                </section>
-            </main>
-        </div>
-
-        <footer class="footer">
-            MMXXVI - uncognic
-        </footer>
-    </div>
+    @include("../partials/_footer.html")
 </body>
 
 </html>

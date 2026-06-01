@@ -1,72 +1,45 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
-    <link rel="icon" type="image/x-icon" href="../tux.ico">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>selfhosted - uncognic</title>
-    <meta property="og:title" content="uncognic - selfhosted" />
-    <link rel="stylesheet" href="../home/styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>selfhosted</title>
+    <link rel="icon" type="image/x-icon" href="/tux.ico">
+    <meta property="og:title" content="selfhosted" />
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-    <div class="wrap">
-        @include("../partials/_header.html")
+    @include("../partials/_header.html")
+    @include("../partials/_sidebar.html")
 
-        <div class="grid" style="margin-top:0;">
-            @include("../partials/_about.html")
+    <article>
+        <h1>selfhosted services</h1>
+        <p>a curated list of services i host and maintain.</p>
 
-            <main class="panel" role="main" id="selfhosted">
-                <h1>selfhosted services</h1>
-                <p style="margin-bottom:8px;color:var(--muted)">a curated list of services I host and maintain.</p>
+        <p class="proj"><a href="https://shared.1707070.xyz/">shared</a> <span class="desc">&dash; 0x0.st-like file
+                sharing server, written by me</span></p>
+        <p class="proj"><a href="https://jellyfin.1707070.xyz/">jellyfin</a> <span class="desc">&dash; selfhosted media
+                server</span></p>
+        <p class="proj"><a href="https://redlib.1707070.xyz/">redlib</a> <span class="desc">&dash; privacy-respecting
+                reddit front-end</span></p>
+        <p class="proj"><a href="https://fmd.1707070.xyz/">fmd-foss</a> <span class="desc">&dash; foss phone tracking
+                server</span></p>
+        <p class="proj"><a href="https://immich.1707070.xyz/">immich</a> <span class="desc">&dash; photo and video
+                backup service</span></p>
+        <p class="proj"><a href="https://privatebin.1707070.xyz/">privatebin</a> <span class="desc">&dash; anonymous
+                encrypted pastebin</span></p>
+        <p class="proj"><a href="https://gokapi.1707070.xyz/login">gokapi</a> <span class="desc">&dash; temporary file
+                sharing service</span></p>
 
-                <section class="projects" aria-labelledby="selfhosted" style="margin-top:10px;">
-                    <a class="proj" href="https://shared.1707070.xyz/">
-                        <strong>shared</strong>
-                        <div class="proj-desc">0x0.st-like file sharing server, written by me</div>
-                    </a>
-                    <a class="proj" href="https://jellyfin.1707070.xyz/" target="_blank" rel="noopener noreferrer">
-                        <strong>jellyfin</strong>
-                        <div class="proj-desc">selfhosted media server</div>
-                    </a>
+        <hr>
 
-                    <a class="proj" href="https://redlib.1707070.xyz/" target="_blank" rel="noopener noreferrer">
-                        <strong>redlib</strong>
-                        <div class="proj-desc">privacy-respecting reddit front-end</div>
-                    </a>
+        <p>some services require auth.</p>
+        <p>downtime should be expected; it's hosted on a 15 year old home pc.</p>
+    </article>
 
-                    <a class="proj" href="https://fmd.1707070.xyz/" target="_blank" rel="noopener noreferrer">
-                        <strong>fmd‑foss</strong>
-                        <div class="proj-desc">foss phone tracking server</div>
-                    </a>
-
-                    <a class="proj" href="https://immich.1707070.xyz/" target="_blank" rel="noopener noreferrer">
-                        <strong>immich</strong>
-                        <div class="proj-desc">photo and video backup service</div>
-                    </a>
-
-                    <a class="proj" href="https://privatebin.1707070.xyz/" target="_blank" rel="noopener noreferrer">
-                        <strong>privatebin</strong>
-                        <div class="proj-desc">anonymous encrypted pastebin</div>
-                    </a>
-                    <a class="proj" href="https://gokapi.1707070.xyz/login" target="_blank" rel="noopener noreferrer">
-                        <strong>gokapi</strong>
-                        <div class="proj-desc">temporary file sharing service</div>
-                    </a>
-                </section>
-
-                <hr style="border:none;border-top:1px dashed rgba(255,255,255,0.02);margin:12px 0;">
-
-                <p style="font-size:13px;color:var(--muted)">some services require auth</p>
-                <p style="font-size:13px;color:var(--muted)">downtime should be expected; it's hosted on a 15 year old
-                    home pc</p>
-            </main>
-        </div>
-        <footer class="footer">
-            MMXXVI - uncognic
-        </footer>
-    </div>
+    @include("../partials/_footer.html")
 </body>
 
 </html>
