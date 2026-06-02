@@ -2,44 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>selfhosted</title>
-    <link rel="icon" type="image/x-icon" href="/tux.ico">
-    <meta property="og:title" content="selfhosted" />
-    <link rel="stylesheet" href="/style.css">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>selfhosted</title>
+        <link rel="icon" type="image/x-icon" href="/tux.ico">
+        <meta property="og:title" content="selfhosted" />
+        <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-    @include("../partials/_header.html")
-    @include("../partials/_sidebar.html")
+        @include("../partials/_header.html")
+        @include("../partials/_sidebar.html")
 
-    <article>
-        <h1>selfhosted services</h1>
-        <p>a curated list of services i host and maintain.</p>
+        <article>
+                <h1>selfhosted services</h1>
+                <p>a curated list of services i host and maintain.</p>
+                <p class="proj"><a href="https://1707070.xyz/">this website</a> <span class="desc">&dash; the website
+                                you're on right now</span></p>
+                <p class="proj"><a href="https://shared.1707070.xyz/">shared</a> <span class="desc">&dash; 0x0.st-like
+                                file
+                                sharing server, written by me</span></p>
+                <p class="proj"><a href="https://jellyfin.1707070.xyz/">jellyfin</a> <span class="desc">&dash;
+                                selfhosted media
+                                server</span></p>
+                <p class="proj"><a href="https://redlib.1707070.xyz/">redlib</a> <span class="desc">&dash;
+                                privacy-respecting
+                                reddit front-end</span></p>
+                <p class="proj"><a href="https://fmd.1707070.xyz/">fmd-foss</a> <span class="desc">&dash; foss phone
+                                tracking
+                                server</span></p>
+                <p class="proj"><a href="https://immich.1707070.xyz/">immich</a> <span class="desc">&dash; photo and
+                                video
+                                backup service</span></p>
+                <p class="proj"><a href="https://privatebin.1707070.xyz/">privatebin</a> <span class="desc">&dash;
+                                anonymous
+                                encrypted pastebin</span></p>
+                <p class="proj"><a href="https://gokapi.1707070.xyz/login">gokapi</a> <span class="desc">&dash;
+                                temporary file
+                                sharing service</span></p>
 
-        <p class="proj"><a href="https://shared.1707070.xyz/">shared</a> <span class="desc">&dash; 0x0.st-like file
-                sharing server, written by me</span></p>
-        <p class="proj"><a href="https://jellyfin.1707070.xyz/">jellyfin</a> <span class="desc">&dash; selfhosted media
-                server</span></p>
-        <p class="proj"><a href="https://redlib.1707070.xyz/">redlib</a> <span class="desc">&dash; privacy-respecting
-                reddit front-end</span></p>
-        <p class="proj"><a href="https://fmd.1707070.xyz/">fmd-foss</a> <span class="desc">&dash; foss phone tracking
-                server</span></p>
-        <p class="proj"><a href="https://immich.1707070.xyz/">immich</a> <span class="desc">&dash; photo and video
-                backup service</span></p>
-        <p class="proj"><a href="https://privatebin.1707070.xyz/">privatebin</a> <span class="desc">&dash; anonymous
-                encrypted pastebin</span></p>
-        <p class="proj"><a href="https://gokapi.1707070.xyz/login">gokapi</a> <span class="desc">&dash; temporary file
-                sharing service</span></p>
+                <hr>
 
-        <hr>
+                <p>some services require auth.</p>
+                <p>downtime should be expected; it's hosted on a 15 year old home pc.</p>
+        </article>
 
-        <p>some services require auth.</p>
-        <p>downtime should be expected; it's hosted on a 15 year old home pc.</p>
-    </article>
+        <article>
+                <h2>server specs - inspiron 660s</h2>
+                <ul>
+                        <li><strong>CPU:</strong> i5-3450</li>
+                        <li><strong>RAM:</strong> 4 GB DDR3</li>
+                        <li><strong>Storage:</strong> 1x 500 GB HDD (boot drive, encrypted), 1x 250 GB HDD (media
+                                storage)</li>
+                        <li><strong>OS:</strong> Debian GNU/Linux 13 "Trixie"</li>
+                        <li><strong>Uptime:</strong> some</li>
+                </ul>
+        </article>
 
-    @include("../partials/_footer.html")
+        <article>
+                <p></p>
+        </article>
+
+        @include("../partials/_footer.html")
 </body>
 
 </html>
