@@ -63,13 +63,6 @@ header h1 a {
     color: var(--text);
 }
 
-header h1 #headerSubTitle {
-    margin-left: 1em;
-    font-size: 50%;
-    font-style: italic;
-    color: var(--muted);
-}
-
 nav#side-bar {
     flex-basis: content;
     flex-shrink: 0;
